@@ -325,7 +325,6 @@ div.promo {
   font-size: 14px;
   background: #ea3544;
   border-radius: 3px;
-  outline: none;
   text-align: center;
 }
 .goods-item {
@@ -563,7 +562,6 @@ div.new-price.new-price-margin {
   background-repeat: no-repeat;
   background-position: 150px 28px;
   height: 265px;
-  outline: 1px solid blue;
 }
 .about {
   padding-top: 60px;
