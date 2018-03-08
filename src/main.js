@@ -5,8 +5,13 @@ import App from './App';
 import router from './router';
 
 import Header from './components/Header';
+import Home from './components/home/Home';
+import Slider from './components/home/PromoSlider';
 
 Vue.component('app-header', Header);
+Vue.component('app-home', Home);
+Vue.component('app-slider', Slider);
+
 
 Vue.config.productionTip = false;
 
