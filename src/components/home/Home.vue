@@ -204,7 +204,8 @@ label, h1, h2, p, fieldset, button, input, section {
 }*/
 /*стили для разработки*/
 .promo {
-  padding-top: 60px;
+  display: block;
+  margin-top: 60px;
   justify-content: space-between;
   margin-bottom: 55px;
 }
