@@ -1,20 +1,34 @@
 <template>
-  <div class="promo-slider">
+  <div>
+    <div
+    v-for="slide in slides"
+    :key="slide.imgSrc"
+    class="promo-slider">
     <div class="slider-title">
       <h3 class="slider-title-big">Перфораторы</h3>
       <p class="slider-description">Настоящие мужские игрушки</p>
-   </div>
-   <a href="#" class="slider-open">Открыть каталог</a>
+    </div>
+    <a href="#" class="slider-open">Открыть каталог</a>
     <img
-    class="slider-img"
-    src="./../../assets/img/slider-1.png"
-    height="266"
-    width="620"
-    alt="Перфораторы">
+      class="slider-img"
+      :src="slide.imgSrc"
+      height="266"
+      width="620"
+      alt="Перфораторы">
+    </div>
   </div>
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      slides: [
+        { imgSrc: './static/img/slider-1.png' },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
