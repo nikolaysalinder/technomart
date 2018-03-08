@@ -559,7 +559,6 @@ div.new-price.new-price-margin {
   line-height: 24px;
 }
 .services-delivery {
-  background: #f4f8fb url('./../../assets/img/car.png');
   background-repeat: no-repeat;
   background-position: 150px 28px;
   height: 265px;
