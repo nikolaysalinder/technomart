@@ -7,10 +7,12 @@ import router from './router';
 import Header from './components/Header';
 import Home from './components/home/Home';
 import Slider from './components/home/PromoSlider';
+import Footer from './components/Footer';
 
 Vue.component('app-header', Header);
 Vue.component('app-home', Home);
 Vue.component('app-slider', Slider);
+Vue.component('app-footer', Footer);
 
 
 Vue.config.productionTip = false;
