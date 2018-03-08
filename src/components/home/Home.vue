@@ -203,8 +203,8 @@ label, h1, h2, p, fieldset, button, input, section {
   outline: 1px solid green;
 }*/
 /*стили для разработки*/
-.promo {
-  display: block;
+div.promo {
+  display: flex;
   margin-top: 60px;
   justify-content: space-between;
   margin-bottom: 55px;
