@@ -156,7 +156,7 @@
         заехав в наш офис</p>
         <div id="about-map">
           <img
-          src="./../../assets/img/map.jpg"
+          :src="srcMap"
           height="158"
           width="300"
           alt="Большая конюшенная ул., 19">
@@ -173,6 +173,7 @@ export default {
   name: 'Home',
   data() {
     return {
+      srcMap: './static/img/map.jpg',
       goods: [
         { title: 'Перфоратор BOSCH BFG 9000', imgSrc: './static/img/drel-1.jpg', oldPrice: '32500', newPrice: '25500' },
         { title: 'Перфоратор BOSCH BFG 3000', imgSrc: './static/img/drel-2.jpg', oldPrice: '22500', newPrice: '15500' },
@@ -482,7 +483,6 @@ div.new-price.new-price-margin {
 }
 .services {
   padding-top: 31px;
-  padding-bottom: 100px;
   background: #f4f8fb;
 }
 .services-title {
@@ -559,9 +559,11 @@ div.new-price.new-price-margin {
   line-height: 24px;
 }
 .services-delivery {
-  background: url('./../../assets/img/car.png');
+  background: #f4f8fb url('./../../assets/img/car.png');
   background-repeat: no-repeat;
   background-position: 150px 28px;
+  height: 265px;
+  outline: 1px solid blue;
 }
 .about {
   padding-top: 60px;
