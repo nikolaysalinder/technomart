@@ -8,7 +8,7 @@
       <h3 class="slider-title-big">Перфораторы</h3>
       <p class="slider-description">Настоящие мужские игрушки</p>
     </div>
-    <a href="#" class="slider-open">Открыть каталог</a>
+    <a href="#" class="btn-slider-open">Открыть каталог</a>
     <img
       class="slider-img"
       :src="slide.imgSrc"
@@ -59,14 +59,14 @@ export default {
   margin-top: 0px;
   font-size: 20px;
 }
-.slider-open {
+.btn-slider-open {
   z-index: 1;
   display: block;
   position: absolute;
   left: 24px;
   bottom: 22px;
   border-radius: 3px;
-  background: rgba(255, 0, 0, .4);
+  background: #ea3544;
   padding-top: 10px;
   padding-left: 50px;
   padding-right: 48px;
@@ -75,5 +75,11 @@ export default {
   text-decoration: none;
   font-size: 14px;
   color: #fff;
+}
+.btn-slider-open:hover {
+  background: #ca2d37;
+}
+.btn-slider-open:active {
+  background: #ba2633;
 }
 </style>

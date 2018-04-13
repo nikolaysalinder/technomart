@@ -112,8 +112,15 @@ label, h1, h2, p, fieldset, button, input, section {
   color: #fff;
   font-size: 30px;
   background-color: #ea3544;
-  border-bottom: 5px solid yellow;
-  border-color: #b52936;
+  border-bottom: 5px solid #b52936;
+}
+.footer-logo:hover {
+  background-color: #ca2c37;
+  border-bottom: 5px solid #9a212a;
+}
+.footer-logo:active {
+  background-color: #ba2731;
+  border-bottom: 5px solid #9a212a;
 }
 .footer-nav-top ul,
 .footer-nav-top li {
@@ -137,6 +144,12 @@ label, h1, h2, p, fieldset, button, input, section {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
+}
+.footer-nav-top a:hover {
+  text-decoration: underline;
+}
+.footer-nav-top a:active {
+  color: #72788b;
 }
 .footer-middle {
   background: #32425c;
@@ -173,6 +186,12 @@ label, h1, h2, p, fieldset, button, input, section {
   text-decoration: none;
   color: #ffd180;
   font-size: 18px;
+}
+.footer-nav-middle a:hover {
+  text-decoration: underline;
+}
+.footer-nav-middle a:active {
+  color: #ae946f;
 }
 .footer-bottom {
   background: #293449;
@@ -259,5 +278,13 @@ label, h1, h2, p, fieldset, button, input, section {
 }
 .footer-developer a {
   color: #ffd180;
+  text-decoration: none;
+}
+.footer-developer a:hover {
+  text-decoration: underline;
+}
+.footer-developer a:active {
+  color: #ea3544;
+  text-decoration: none;
 }
 </style>

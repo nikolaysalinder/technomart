@@ -96,32 +96,61 @@
       </p>
       <div class="services-columns">
         <ul class="services-column-left">
-          <li><button class="active">Доставка</button></li>
-          <li><button>Гарантия</button></li>
-          <li><button>Кредит</button></li>
+          <li>
+            <button
+            @click="showService = 'delivery'"
+            :class="{ active: showService === 'delivery' }"
+            >Доставка</button>
+          </li>
+          <li>
+            <button
+            @click="showService = 'warranty'"
+            :class="{ active: showService === 'warranty' }" >Гарантия</button>
+          </li>
+          <li>
+            <button
+            @click="showService = 'credit'"
+            :class="{ active: showService === 'credit'}"
+            >Кредит</button></li>
         </ul>
         <ul class="services-column-right">
           <li>
-            <div class="services-delivery">
+            <div class="services-delivery"
+            v-if="showService === 'delivery'">
               <h3 class="services-item-title">Доставка</h3>
               <p class="services-item-info">
-                Мы с удовольствием доставим ваш товар прямо<br>
-                к вашему подъезду совершенно бесплатно!<br>
-                Ведь мы неплохо заработаем,<br>
-                поднимая его на ваш этаж!<br>
+                Мы с удовольствием доставим ваш товар прямо
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем,
+                поднимая его на ваш этаж!
               </p>
             </div>
           </li>
           <li>
-            <div class="services-garanty">
-              <h3 class="services-item-title"></h3>
-              <p class="services-item-info"></p>
+            <div class="services-warranty"
+            v-if="showService === 'warranty'">
+              <h3 class="services-item-title">Гарантия</h3>
+              <p class="services-item-info">
+                Если купленный у нас товар поломается или заискрит, а также в
+                случае пожара, спровоцированного его возгаранием, вы всегда
+                можете быть уверены в нашей гарантии. Мы обменяем
+                сгоревший товар на новый.
+
+                Дом уж восстановите как-нибудь сами.
+              </p>
             </div>
           </li>
           <li>
-            <div class="services-credit">
-              <h3 class="services-item-title"></h3>
-              <p class="services-item-info"></p>
+            <div class="services-credit"
+            v-if="showService === 'credit'">
+              <h3 class="services-item-title">Кредит</h3>
+              <p class="services-item-info">
+                Залезть в долговую яму стало проще!
+                Кредитные консультанты придут вам на помощь.
+              </p>
+              <a
+              href=""
+              class="btn-credit">Отправить заявку</a>
             </div>
           </li>
         </ul>
@@ -173,6 +202,7 @@ export default {
   name: 'Home',
   data() {
     return {
+      showService: 'warranty',
       srcMap: './static/img/map.jpg',
       goods: [
         { title: 'Перфоратор BOSCH BFG 9000', imgSrc: './static/img/drel-1.jpg', oldPrice: '32500', newPrice: '25500' },
@@ -251,6 +281,12 @@ div.promo {
   color: #fff;
   background: rgba(0,0,0, .2);
 }
+.promo-item-info:hover {
+  background: rgba(0,0,0, .3);
+}
+.promo-item-info:active {
+  background: rgba(0,0,0, .5);
+}
 .promo-slider {
   display: block;
   width: 620px;
@@ -326,6 +362,12 @@ div.promo {
   background: #ea3544;
   border-radius: 3px;
   text-align: center;
+}
+.section-header a:hover {
+   background: #ca2d37;
+}
+.section-header a:active {
+  background: #ba2633;
 }
 .goods-item {
   margin-top: 20px;
@@ -458,6 +500,7 @@ div.new-price.new-price-margin {
 }
 .goods-item-actions .bookmark:active {
   border-color: #c1c5ce;
+  color: #c1c5ce;
 }
 .goods-items {
   display: flex;
@@ -515,7 +558,7 @@ div.new-price.new-price-margin {
 .services-column-left button {
   display: block;
   border: 0;
-  background: #26344a;
+  background: #32425c;
   padding-top: 15px;
   padding-left: 21px;
   padding-bottom: 19px;
@@ -526,11 +569,17 @@ div.new-price.new-price-margin {
   font-family: 'PT Sans', sans-serif;
   text-align: left;
   color: #fff;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #293449;
+  border-top: 1px solid #405069;
+}
+.services-column-left button:active {
+  background: #293448;
+  color: #fff;
 }
 .services-column-left .active {
   background: #fff;
   color: #26344a;
+  border: none;
 }
 .services-column-right {
   margin: 0;
@@ -557,11 +606,44 @@ div.new-price.new-price-margin {
   font-size: 13px;
   font-family: 'PT Sans', sans-serif;
   line-height: 24px;
+  white-space: pre;
 }
 .services-delivery {
   background-repeat: no-repeat;
   background-position: 150px 28px;
   height: 265px;
+}
+.services-warranty {
+  background-repeat: no-repeat;
+  background-position: 150px 28px;
+  height: 265px;
+}
+.services-credit {
+  background-repeat: no-repeat;
+  background-position: 150px 28px;
+  height: 265px;
+}
+.btn-credit {
+  display: block;
+  width: 195px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #ee3643;
+  font-family: "Cuprum",sans-serif,Arial;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.btn-credit:hover {
+   background: #ca2d37;
+}
+.btn-credit:active {
+  background: #ba2633;
 }
 .about {
   padding-top: 60px;
@@ -619,6 +701,12 @@ div.new-price.new-price-margin {
   color: #fff;
   background: #ea3544;
 }
+.btn-about:hover {
+   background: #ca2d37;
+}
+.btn-about:active {
+  background: #ba2633;
+}
 #about-map {
   display: block;
   margin-top: 30px;
@@ -637,5 +725,11 @@ div.new-price.new-price-margin {
   border: none;
   color: #fff;
   background: #ea3544;
+}
+.btn-map:hover {
+   background: #ca2d37;
+}
+.btn-map:active {
+  background: #ba2633;
 }
 </style>

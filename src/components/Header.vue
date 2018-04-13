@@ -5,7 +5,10 @@
         <a href="/" class="header-logo">Техномарт</a>
         <form action="#">
           <label for="search">
-            <input id="search" type="text" placeholder="Поиск:" required>
+            <input
+            id="search"
+            type="text"
+            placeholder="Поиск:">
           </label>
         </form>
         <a href="#" class="bookmark">Закладки: 0</a>
@@ -90,6 +93,13 @@ body {
   margin: 0;
   box-shadow: 0 4px  #b62a32;
 }
+.header-panel-top .header-logo:hover {
+  background-color: #ca2c37;
+  box-shadow: 0 4px #9a212a;
+}
+.header-panel-top .header-logo:active {
+  background-color: #ba2731;
+}
 .header-panel-top form {
   display: flex;
   width: 270px;
@@ -106,6 +116,17 @@ body {
   position: relative;
 }
 .header-panel-top label[for="search"]::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  background: url('./../assets/img/icon-search.png');
+  background-repeat: no-repeat;
+}
+.header-panel-top label[for="search"]:hover::before {
   content: '';
   position: absolute;
   top: 12px;
@@ -153,6 +174,10 @@ body {
   background-repeat: no-repeat;
   background-position: 17px 12px;
 }
+.header-panel-top .bookmark:active {
+  color: #bcbcbe;
+  background-color: #161d28;
+}
 .header-panel-top .cart {
   padding-right: 31px;
   font-size: 17px;
@@ -160,11 +185,21 @@ body {
   background-repeat: no-repeat;
   background-position: 14px 12px;
 }
+.header-panel-top .cart:active {
+  color: #bcbcbe;
+  background-color: #161d28;
+}
 .header-panel-top .order {
   padding-left: 20px;
   font-size: 17px;
   padding-right: 22px;
-  background: #63a63f;
+  background: #63a63d;
+}
+.header-panel-top .order:hover {
+  background: #5eb92f;
+}
+.header-panel-top .order:active {
+  background: #508633;
 }
 .header-panel-middle {
   padding-top: 32px;
@@ -190,7 +225,7 @@ body {
   background: url('./../assets/img/icon-phone.png');
   background-repeat: no-repeat;
   background-position: 12px 8px;
-  color: #ea3644;
+  color: #ea3544;
 }
 .header-panel-middle .adress {
   font-size: 14px;
@@ -220,6 +255,12 @@ body {
   background-repeat: no-repeat;
   background-position: 14px 14px;
 }
+.header-panel-middle .enter:hover {
+  color: #ea3541;
+}
+.header-panel-middle .enter:active {
+  color: #cbcbcb;
+}
 .header-panel-middle .register {
   display: block;
   float: right;
@@ -231,6 +272,12 @@ body {
   color: #000;
   font-size: 21px;
   text-decoration: none;
+}
+.header-panel-middle .register:hover {
+  color: #ea3541;
+}
+.header-panel-middle .register:active {
+  color: #cbcbcb;
 }
 .header-panel-bottom {
   background: #f3f7fa;
@@ -260,6 +307,10 @@ body {
   font-size: 18px;
   background: #32425c;
   color: #fff;
+}
+.main-navigation a:active {
+  color: #a7adad;
+  background: #1e2739;
 }
 .main-navigation a:hover {
   background: #293448;
