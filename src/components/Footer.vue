@@ -235,6 +235,11 @@ label, h1, h2, p, fieldset, button, input, section {
   background-repeat: no-repeat;
   background-position: 8px 13px;
 }
+.socials-vk:active {
+  background: #ba2633 url('./../assets/img/vk-icon.png');
+  background-repeat: no-repeat;
+  background-position: 8px 13px;
+}
 .socials-fb {
   background: #212a3a url('./../assets/img/fb-icon.png');
   background-repeat: no-repeat;
@@ -245,6 +250,11 @@ label, h1, h2, p, fieldset, button, input, section {
   background-repeat: no-repeat;
   background-position: 14px 10px;
 }
+.socials-fb:active {
+   background: #ba2633 url('./../assets/img/fb-icon.png');
+  background-repeat: no-repeat;
+  background-position: 14px 10px;
+}
 .socials-inst {
   background: #212a3a url('./../assets/img/insta-icon.png');
   background-repeat: no-repeat;
@@ -252,6 +262,11 @@ label, h1, h2, p, fieldset, button, input, section {
 }
 .socials-inst:hover {
   background: #ea3544 url('./../assets/img/insta-icon.png');
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
+.socials-inst:active {
+  background: #ba2633 url('./../assets/img/insta-icon.png');
   background-repeat: no-repeat;
   background-position: 10px 10px;
 }

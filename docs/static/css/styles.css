@@ -1,3 +1,9 @@
 .services-delivery {
-  background: url("../img/car.png");
+  background: url('../img/car.png');
+}
+.services-warranty {
+  background: url('../img/medal.png');
+}
+.services-credit {
+  background: url('../img/credit.png');
 }
